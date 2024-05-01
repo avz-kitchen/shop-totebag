@@ -1,6 +1,8 @@
-function Home() {
+
+function HomePage() {
     let label ="Shop Now";
   return (
+    
     <section className="section-hero">
       <div>
         <h1>Live life easier, with totee.</h1>
@@ -8,9 +10,10 @@ function Home() {
         <button>{label}</button>
       </div>
       <div className="hero-image">Image Placeholder</div>
-    </section>
-    
+
+    </section> 
+
   );
 }
 
-export default Home;
+export default HomePage;

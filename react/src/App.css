@@ -7,7 +7,6 @@
   color: var(--primary);
   margin: 0 auto;
   text-align: center;
-}
 
 .logo {
   height: 6em;
@@ -61,8 +60,34 @@
 
 .card {
   padding: 2em;
+  background-color: red;
 }
 
 .read-the-docs {
   color: #888;
 }
+
+.navbar {
+  display: flex;
+  padding: 16px 64px;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  font-weight: bold;
+}
+
+.containers {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.categories>li{
+  display: inline-block;
+  gap: 24px;
+  margin-right: 15px;
+
+  
+}
+
+
