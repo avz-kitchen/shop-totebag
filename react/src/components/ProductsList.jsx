@@ -1,43 +1,62 @@
 import { useState } from "react";
 import products from "../assets/products.json";
-import "./Products.css"
+import "./Products.css";
 
 function ProductList() {
- const [productsToDisplay, setProductsToDisplay] = useState(products);
-  const addToCart = (productId) => {
-    const newList = productsToDisplay.filter((products) => products.id !== productId)
-    setProductsToDisplay(newList);
+  const [productsToDisplay, setProductsToDisplay] = useState(products);
+ 
+  function Counter() {
+    const [counter, setCounter] = useState(0);
+
+    const increaseCounter = () => {
+      setCounter(counter + 1);
+    };
+
+    const decreaseCounter = () => {
+      if (counter >= 1) {
+        setCounter(counter - 1);
+      }
+    };
+
+    return (
+      <div >
+        <button className="btn-counter" onClick={decreaseCounter}>-</button>
+
+        <span>{counter}</span>
+        <button className="btn-counter" onClick={increaseCounter}>+</button>
+        <button onClick={increaseCounter}>
+              Add to Cart
+        </button>
+        <button className="btn-delete" onClick={decreaseCounter}>
+              Delete
+        </button>
+      </div>
+    );
   }
-  let counter = 0;
-  
-  const increaseCounter = () =>{
-    setCounter(counter + 1)
-}
+  const currentList = (productId) => {
+    const newList = productsToDisplay.filter(
+      (products) => products.id !== productId
+    );
+    setProductsToDisplay(newList);
+  };
 
 
-if(productsToDisplay.length > 0){
-    counter= <span>Cart item: {productsToDisplay.length}</span>
-}
   return (
-<section className="ProductList">
-    {counter}
-    {products.map((productObj)=> {
-        return(
-            <div className="card" key={productObj.id}>
-            <img src={productObj.images}/>
-            <p>{productObj.title}</p>
+    <section className="ProductList">
+      {products.map((productObj) => {
+        return (
+          <div className="card" key={productObj.id}>
+            {productObj.rating > 5 && <h3>Hot Picks</h3>}
+            <img src={productObj.images} />
+            <h4>{productObj.title}</h4>
             <p>Product Price: {productObj.price}</p>
-                          {productObj.rating > 5 && <h3>Hot Picks</h3>}
+            <Counter/>
 
-            <button onClick={() => {addToCart}}>Add to Cart</button>
-            </div>
+          </div>
         );
-    })}
-</section>
-)
-    
+      })}
+    </section>
+  );
 }
-
-
 
 export default ProductList;
