@@ -9,8 +9,7 @@ function Home() {
       </div>
       <div className="hero-image">Image Placeholder</div>
     </section>
-          <Product />
-
+    
   );
 }
 
