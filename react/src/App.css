@@ -7,7 +7,9 @@
   color: var(--primary);
   margin: 0 auto;
   text-align: center;
-
+  justify-content: center;
+  width:100%;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -25,22 +27,17 @@
 
 .section-hero {
   display: flex;
-  gap: 120px;
+  width: 100%;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 48px;
-  padding: 2em;
+  padding: 6em;
   text-align: left;
-
 }
 
-.hero-image {
-  display: flex;
-  background-color: pink;
-  width: 50%;
-  height: 100%;
+.hero-image>img {
+ width: 60%;
 }
-
 
 @keyframes logo-spin {
   from {
@@ -59,8 +56,17 @@
 }
 
 .card {
+  display: flex;
+width: min-content;
+flex-direction: column;
   padding: 2em;
-  background-color: red;
+  border: 0.5em solid var(--primary);
+  align-items: center;
+  
+}
+
+.card>img{
+height: 400px;
 }
 
 .read-the-docs {
