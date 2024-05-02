@@ -41,6 +41,8 @@ h3{
   text-transform: uppercase;
   color: var(--secondary);
 }
+
+/*All Buttons*/
 button {
   border-radius: 2em;
   width: fit-content;

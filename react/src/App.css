@@ -1,8 +1,9 @@
 #root {
   --primary: #8E2E5C;
   --surface: #ECE7E3;
+  --secondary:var(--secondary);
   background-color: var(--surface);
-  color: var(--primary);
+  color: var(--primary) ;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
@@ -32,26 +33,5 @@
     transform: rotate(360deg);
   }
 }
-
-
-
-.card {
-  display: flex;
-width: min-content;
-flex-direction: column;
-  padding: 2em;
-  border: 0.5em solid var(--primary);
-  align-items: center;
-  
-}
-
-.card>img{
-height: 400px;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 
 
