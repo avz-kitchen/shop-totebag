@@ -1,4 +1,6 @@
 import "../components/Navbar.css";
+import { NavLink } from "react-router-dom";
+import "../components/navbar.css"
 function Navbar() {
   return (
     <nav>
@@ -6,22 +8,8 @@ function Navbar() {
         <img src="./public/totee-logo.png" alt="Totee logo"></img>
       </div>
       <div className="nav-item">
-        <ul className="categories">
-          <li>Typo</li>
-          <li>Graphics</li>
-          <li>Contacts</li>
-        </ul>
-      </div>
-      <div className="nav-item">
-        <div className="nav-action">
-          <img src="./public/images/i-account.png" alt="Account" />
-        </div>
-        <div className="nav-action">
-          <img src="./public/images/i-cart.png" alt="Cart" />
-        </div>
-        <div>
-          <img src="./public/images/i-search.png" alt="Search" />
-        </div>
+      <NavLink to="/products">Products</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
       </div>
     </nav>
   );

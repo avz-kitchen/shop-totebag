@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 import products from "../assets/products.json";
 import "./Products.css";
 
 function ProductList() {
-  const [productsToDisplay, setProductsToDisplay] = useState(products);
+const [productsToDisplay, setProductsToDisplay] = useState(products);
  
   function Counter() {
     const [counter, setCounter] = useState(0);
@@ -34,11 +34,11 @@ function ProductList() {
     );
   }
   const currentList = (productId) => {
-    const newList = productsToDisplay.filter(
-      (products) => products.id !== productId
-    );
-    setProductsToDisplay(newList);
-  };
+ const newList = productsToDisplay.filter(
+(products) => products.id !== productId
+ );
+ setProductsToDisplay(newList);
+ };
 
 
   return (

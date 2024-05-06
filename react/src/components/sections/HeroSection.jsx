@@ -1,4 +1,4 @@
-
+import "./section.css"
 function HeroSection(){
     return(
 <section className="section-hero">

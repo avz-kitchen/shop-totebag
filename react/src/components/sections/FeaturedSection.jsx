@@ -1,5 +1,6 @@
-import ProductList from "./ProductsList";
-import "./Section.css"
+import ProductList from "../ProductsList";
+import "../products.css"
+import "./section.css"
 
 function FeaturedSection(){
 return(

@@ -1,6 +1,6 @@
-import HeroSection from "../components/HeroSection";
-import FeaturedSection from "../components/FeaturedSection";
-import AboutSection from "../components/AboutSection";
+import HeroSection from "../components/sections/HeroSection";
+import FeaturedSection from "../components/sections/FeaturedSection";
+import AboutSection from "../components/sections/AboutSection";
 function HomePage() {
   return (
     <section>

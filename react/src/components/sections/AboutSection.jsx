@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 // import imagePath from "../../../../assets/react.svg";
 import Benefits from "./Benifits";
-import "./Section.css"
+import "./benefits.css"
 
 const data = [
   {
